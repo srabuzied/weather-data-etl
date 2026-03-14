@@ -1,30 +1,30 @@
 # Weather Data ETL Pipeline
 
-End-to-end ETL pipeline that ingests weather forecast data from a JSON API, converts it to structured CSV format using Python, and performs transformation, replication, aggregation, and sorting using Talend to produce clean analytical datasets.
+An end to end ETL pipeline that extracts weather forecast data from a REST API in JSON format, converts it to CSV using Python, and processes it with Talend Open Studio to generate structured analytical datasets.
 
 ## Overview
-This project implements an end-to-end ETL pipeline for processing weather forecast data.
-
-The pipeline extracts weather data from a JSON API, converts it into a structured CSV format using Python, and processes it through a Talend workflow that performs transformation, replication, aggregation, and sorting to produce analytical datasets.
+This project demonstrates a complete ETL workflow for processing weather forecast data.  
+Data is extracted from a REST API, preprocessed using a Python script `converter.py`, and then processed through a Talend ETL pipeline where transformations, replication, aggregation, and sorting are performed to produce clean analytical datasets.
 
 ## Architecture
 
-Weather API (JSON)  
+Weather REST API JSON  
 ↓  
-Python preprocessing (`converter.py`)  
+Python preprocessing script `converter.py`  
 ↓  
-Talend ETL Pipeline  
-- tMap (data transformation)  
-- tReplicate (data branching)  
-- tAggregateRow (aggregation)  
-- tSortRow (sorting)  
+Talend Open Studio ETL workflow  
+- tMap for data transformation  
+- tReplicate for data branching  
+- tAggregateRow for aggregation  
+- tSortRow for sorting  
 ↓  
 Output datasets
 
 ## Technologies
 - Python  
 - Talend Open Studio  
-- CSV  
+- REST API  
+- CSV data processing  
 - ETL pipeline design  
 
 ## Repository Structure
@@ -37,10 +37,10 @@ weather-data-etl
 ├ screenshots/   # Pipeline diagram  
 └ README.md  
 
-## Output Files
+
+## Outputs
 - `weatherOut.csv` – cleaned weather dataset  
 - `weatherSummary.csv` – aggregated weather statistics  
 
 ## Pipeline Diagram
-
 ![Pipeline](screenshots/pipeline.png)
